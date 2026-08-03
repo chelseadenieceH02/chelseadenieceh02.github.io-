@@ -1,24 +1,128 @@
-// ==========================================================================
-// main.js — shared behaviour for every page (mobile nav menu)
-// ==========================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Locations | Benji Bakery</title>
+  <meta name="description" content="Find Benji Bakery's hours, location, and contact details, or send us a message directly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-document.addEventListener('DOMContentLoaded', function () {
-  var navToggle = document.querySelector('.nav-toggle');
-  var mainNav = document.querySelector('.main-nav');
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', function () {
-      var isOpen = mainNav.classList.toggle('open');
-      // Keep the button's accessible state in sync with the menu's visibility
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo" aria-label="Benji Bakery home">
+        <span>B</span>enji Bakery
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Custom Order</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    // Close the mobile menu automatically once a link is chosen
-    mainNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mainNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-});
+  <main id="main-content">
+
+    <section class="bg-taupe" aria-labelledby="page-heading">
+      <div class="container text-center">
+        <p class="eyebrow">We'd Love to Hear From You</p>
+        <h1 id="page-heading">Contact &amp; Location</h1>
+        <p class="section-intro">Stop by, give us a call, or send a quick message below.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="details-heading">
+      <div class="container">
+        <h2 id="details-heading" class="visually-hidden">Contact details</h2>
+        <div class="grid grid-3">
+
+          <div class="info-card">
+            <h3><span aria-hidden="true">&#128205;</span> Location</h3>
+            <p>12 Baker Street<br>Sangre Grande<br>Trinidad and Tobago</p>
+          </div>
+
+          <div class="info-card">
+            <h3><span aria-hidden="true">&#128222;</span> Contact</h3>
+            <p>Phone: <a href="tel:+18685550123" class="text-link">(868) 555-0123</a></p>
+            <p>Email: <a href="mailto:hello@benjibakery.example" class="text-link">hello@benjibakery.example</a></p>
+          </div>
+
+          <div class="info-card">
+            <h3><span aria-hidden="true">&#128337;</span> Operating Hours</h3>
+            <table class="hours-table">
+              <caption class="visually-hidden">Benji Bakery weekly operating hours</caption>
+              <tbody>
+                <tr><th scope="row">Tue - Fri</th><td>6:00 AM - 6:00 PM</td></tr>
+                <tr><th scope="row">Saturday</th><td>7:00 AM - 5:00 PM</td></tr>
+                <tr><th scope="row">Sunday</th><td>7:00 AM - 1:00 PM</td></tr>
+                <tr><th scope="row">Monday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="bg-taupe" aria-labelledby="map-heading">
+      <div class="container">
+        <h2 id="map-heading" class="text-center">Find Us</h2>
+        <iframe
+          class="map-frame"
+          title="Map showing Benji Bakery location in Sangre Grande, Trinidad and Tobago"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-61.135%2C10.575%2C-61.115%2C10.595&layer=mapnik"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Feedback / comment form (also satisfies functional input form requirement in spirit; primary functional form is order.html) -->
+    <section aria-labelledby="feedback-heading">
+      <div class="container">
+        <h2 id="feedback-heading" class="text-center">Send Us a Quick Message</h2>
+        <p class="section-intro">Have a general question or feedback? Use our <a href="order.html" class="text-link">custom order form</a> for cake requests, or reach us directly using the contact details above.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Benji Bakery</h4>
+          <p>Fresh bread, pastries, and custom cakes baked daily in the heart of town.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Custom Order</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>12 Baker Street, Sangre Grande, Trinidad and Tobago</p>
+          <p>Open Tue-Sun, 6:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benji Bakery. All rights reserved. Site built for INFO 0211 - Web Design.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Benji Bakery</title>
-  <meta name="description" content="Learn about Benji Bakery's story, our mission and vision, and meet the small team behind the ovens.">
+  <title>Benji Bakery | Fresh Bread, Pastries &amp; Custom Cakes</title>
+  <meta name="description" content="Benji Bakery is a local bakery serving fresh bread, pastries, and custom cakes. View our daily menu or request a custom cake order online.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -21,8 +21,8 @@
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
       <nav class="main-nav" id="primary-navigation" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="order.html">Custom Order</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -33,100 +33,109 @@
 
   <main id="main-content">
 
-    <section class="bg-taupe" aria-labelledby="page-heading">
-      <div class="container text-center">
-        <p class="eyebrow">Our Story</p>
-        <h1 id="page-heading">About Benji Bakery</h1>
-        <p class="section-intro">Fresh bread, honest ingredients, and a genuine love for baking - that's what Benji Bakery has been about since day one.</p>
-      </div>
-    </section>
-
-    <!-- Company history -->
-    <section aria-labelledby="history-heading">
-      <div class="container grid grid-2" style="align-items:center;">
-        <div>
-          <h2 id="history-heading">How We Started</h2>
-          <p>
-            Benji Bakery began as weekend baking for family and friends before growing into a
-            full neighbourhood bakery. Word of mouth about our sourdough and custom cakes spread
-            quickly, and soon our little kitchen wasn't big enough to keep up with the orders
-            coming in over the phone and social media.
-          </p>
-          <p>
-            Today, we bake fresh bread, pastries, and made-to-order cakes every day, using the
-            same recipes and the same attention to detail we started with. This website exists
-            so it is easier than ever for customers to see what's fresh, learn our story, and
-            place custom cake orders without having to call or message us directly.
-          </p>
+    <!-- Hero / Landing section -->
+    <section class="hero" aria-label="Welcome banner">
+      <img class="hero-bg" src="https://images.pexels.com/photos/3341067/pexels-photo-3341067.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Warm display of freshly baked bread and pastries inside Benji Bakery">
+      <div class="hero-content">
+        <p class="eyebrow" style="color:#FFCCBC;">Baked fresh, every single day</p>
+        <h1>Real Bread. Real Cakes. Real Neighbourhood Bakery.</h1>
+        <p>From crusty sourdough to custom celebration cakes, Benji Bakery brings warm, honest baking to your table.</p>
+        <div class="hero-ctas">
+          <a href="order.html" class="btn btn-primary">Order a Custom Cake</a>
+          <a href="menu.html" class="btn btn-secondary" style="border-color:#FFFDF9; color:#FFFDF9;">View Daily Menu</a>
         </div>
-        <img src="https://images.pexels.com/photos/29380155/pexels-photo-29380155.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interior of Benji Bakery showing freshly baked bread on display shelves" style="border-radius:8px;">
       </div>
     </section>
 
-    <!-- Mission & vision -->
-    <section class="bg-taupe" aria-labelledby="mission-heading">
+    <!-- Introduce the company -->
+    <section aria-labelledby="intro-heading">
       <div class="container">
-        <h2 id="mission-heading" class="text-center">Our Mission &amp; Vision</h2>
-        <div class="grid grid-2">
-          <div class="info-card">
-            <h3>Mission</h3>
-            <p>
-              To bake fresh, honest food every day and make it simple for our neighbours to find,
-              order, and enjoy it - whether that's a loaf of bread for tonight's dinner or a cake
-              for a once-a-year celebration.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Vision</h3>
-            <p>
-              To be the bakery our community thinks of first: known for consistent quality,
-              friendly service, and a menu that's clear and easy to trust, including clear
-              allergen information for every item.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team member profiles -->
-    <section aria-labelledby="team-heading">
-      <div class="container">
-        <p class="eyebrow text-center">Meet the Team</p>
-        <h2 id="team-heading" class="text-center">The People Behind the Ovens</h2>
-        <div class="grid grid-3">
-          <div class="team-member">
-            <div class="avatar" aria-hidden="true">BH</div>
-            <h3>Benji Harris</h3>
-            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Founder &amp; Head Baker</p>
-            <p>Started baking bread at home and turned it into the bakery you see today.</p>
-          </div>
-          <div class="team-member">
-            <div class="avatar" aria-hidden="true">CH</div>
-            <h3>Chelsea Harris</h3>
-            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Operations &amp; Custom Orders</p>
-            <p>Manages custom cake orders and keeps the daily menu fresh and accurate.</p>
-          </div>
-          <div class="team-member">
-            <div class="avatar" aria-hidden="true">MJ</div>
-            <h3>Marcus Joseph</h3>
-            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Pastry Chef</p>
-            <p>Handles our croissants, muffins, and seasonal pastry specials.</p>
-          </div>
-        </div>
-        <p style="text-align:center; font-size:0.875rem; color:#6d4c41; margin-top:1rem;">
-          <em>Team photos above use styled initials as placeholder avatars; replace with real staff photos before your final submission if available.</em>
+        <p class="eyebrow text-center">Our Story</p>
+        <h2 id="intro-heading" class="text-center">A Small Bakery With a Big Oven</h2>
+        <p class="section-intro">
+          Benji Bakery is a local, family-run bakery making fresh bread, pastries, and custom cakes
+          every day. What started as weekend baking for friends has grown into a neighbourhood
+          favourite, and now we're bringing that same care online so it is easier than ever to
+          see what's fresh and place an order.
         </p>
       </div>
     </section>
 
-    <section class="bg-brown" aria-labelledby="about-cta-heading">
-      <div class="container text-center">
-        <h2 id="about-cta-heading">Ready to Place an Order?</h2>
-        <p>Browse today's menu or start a custom cake request in a few clicks.</p>
-        <div class="hero-ctas">
-          <a href="menu.html" class="btn btn-primary">View Menu</a>
-          <a href="order.html" class="btn btn-secondary" style="border-color:#FFFDF9; color:#FFFDF9;">Custom Order</a>
+    <!-- Highlight key products/services -->
+    <section class="bg-taupe" aria-labelledby="products-heading">
+      <div class="container">
+        <p class="eyebrow text-center">What We Bake</p>
+        <h2 id="products-heading" class="text-center">Highlights From Our Menu</h2>
+        <p class="section-intro">A small taste of what's usually in the case. See the full daily menu for prices, ingredients, and allergen notes.</p>
+
+        <div class="grid grid-4">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/5713769/pexels-photo-5713769.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Round loaf of crusty sourdough bread on a wooden board">
+            <div class="card-body">
+              <h3>Fresh Bread</h3>
+              <p>Slow-fermented sourdough and daily loaves, baked each morning.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.pexels.com/photos/2097522/pexels-photo-2097522.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Basket of golden croissants and muffins">
+            <div class="card-body">
+              <h3>Pastries</h3>
+              <p>Buttery croissants, muffins, and hand pies made fresh daily.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.pexels.com/photos/35228372/pexels-photo-35228372.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Decorated celebration cake displayed in the bakery case">
+            <div class="card-body">
+              <h3>Custom Cakes</h3>
+              <p>Birthday, wedding, and celebration cakes designed to order.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tray of fresh cookies ready for the display case">
+            <div class="card-body">
+              <h3>Cookies &amp; Treats</h3>
+              <p>Classic cookies, brownies, and grab-and-go sweet treats.</p>
+            </div>
+          </article>
         </div>
+
+        <p class="text-center mt-lg">
+          <a href="menu.html" class="btn btn-primary">See Full Menu</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section aria-labelledby="why-heading">
+      <div class="container">
+        <p class="eyebrow text-center">Why Customers Choose Us</p>
+        <h2 id="why-heading" class="text-center">Baked Fresh. Locally Owned. Made With Care.</h2>
+        <div class="grid grid-3">
+          <div class="text-center">
+            <h3>Fresh Every Morning</h3>
+            <p>Everything is baked in small batches, so what you see is what came out of the oven that day.</p>
+          </div>
+          <div class="text-center">
+            <h3>Allergen-Friendly Labels</h3>
+            <p>Our menu clearly marks gluten-free, dairy-free, and nut-free options so everyone can choose with confidence.</p>
+          </div>
+          <div class="text-center">
+            <h3>Easy Custom Orders</h3>
+            <p>Request a custom cake online in minutes with our simple, no-fuss order form.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA banner -->
+    <section class="bg-brown" aria-labelledby="cta-heading">
+      <div class="container text-center">
+        <h2 id="cta-heading">Planning a Party or Celebration?</h2>
+        <p>Tell us your date and design idea, and we'll take care of the rest.</p>
+        <a href="order.html" class="btn btn-primary">Start Your Custom Order</a>
       </div>
     </section>
 

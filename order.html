@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benji Bakery | Fresh Bread, Pastries &amp; Custom Cakes</title>
-  <meta name="description" content="Benji Bakery is a local bakery serving fresh bread, pastries, and custom cakes. View our daily menu or request a custom cake order online.">
+  <title>Custom Cake Order | Benji Bakery</title>
+  <meta name="description" content="Request a custom cake from Benji Bakery. Tell us your date, size, and design idea using our online order form.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -21,10 +21,10 @@
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
       <nav class="main-nav" id="primary-navigation" aria-label="Primary">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Custom Order</a></li>
+          <li><a href="order.html" aria-current="page">Custom Order</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -33,109 +33,98 @@
 
   <main id="main-content">
 
-    <!-- Hero / Landing section -->
-    <section class="hero" aria-label="Welcome banner">
-      <img class="hero-bg" src="https://images.pexels.com/photos/3341067/pexels-photo-3341067.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Warm display of freshly baked bread and pastries inside Benji Bakery">
-      <div class="hero-content">
-        <p class="eyebrow" style="color:#FFCCBC;">Baked fresh, every single day</p>
-        <h1>Real Bread. Real Cakes. Real Neighbourhood Bakery.</h1>
-        <p>From crusty sourdough to custom celebration cakes, Benji Bakery brings warm, honest baking to your table.</p>
-        <div class="hero-ctas">
-          <a href="order.html" class="btn btn-primary">Order a Custom Cake</a>
-          <a href="menu.html" class="btn btn-secondary" style="border-color:#FFFDF9; color:#FFFDF9;">View Daily Menu</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Introduce the company -->
-    <section aria-labelledby="intro-heading">
-      <div class="container">
-        <p class="eyebrow text-center">Our Story</p>
-        <h2 id="intro-heading" class="text-center">A Small Bakery With a Big Oven</h2>
-        <p class="section-intro">
-          Benji Bakery is a local, family-run bakery making fresh bread, pastries, and custom cakes
-          every day. What started as weekend baking for friends has grown into a neighbourhood
-          favourite, and now we're bringing that same care online so it is easier than ever to
-          see what's fresh and place an order.
-        </p>
-      </div>
-    </section>
-
-    <!-- Highlight key products/services -->
-    <section class="bg-taupe" aria-labelledby="products-heading">
-      <div class="container">
-        <p class="eyebrow text-center">What We Bake</p>
-        <h2 id="products-heading" class="text-center">Highlights From Our Menu</h2>
-        <p class="section-intro">A small taste of what's usually in the case. See the full daily menu for prices, ingredients, and allergen notes.</p>
-
-        <div class="grid grid-4">
-          <article class="card">
-            <img src="https://images.pexels.com/photos/5713769/pexels-photo-5713769.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Round loaf of crusty sourdough bread on a wooden board">
-            <div class="card-body">
-              <h3>Fresh Bread</h3>
-              <p>Slow-fermented sourdough and daily loaves, baked each morning.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://images.pexels.com/photos/2097522/pexels-photo-2097522.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Basket of golden croissants and muffins">
-            <div class="card-body">
-              <h3>Pastries</h3>
-              <p>Buttery croissants, muffins, and hand pies made fresh daily.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://images.pexels.com/photos/35228372/pexels-photo-35228372.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Decorated celebration cake displayed in the bakery case">
-            <div class="card-body">
-              <h3>Custom Cakes</h3>
-              <p>Birthday, wedding, and celebration cakes designed to order.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tray of fresh cookies ready for the display case">
-            <div class="card-body">
-              <h3>Cookies &amp; Treats</h3>
-              <p>Classic cookies, brownies, and grab-and-go sweet treats.</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="text-center mt-lg">
-          <a href="menu.html" class="btn btn-primary">See Full Menu</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Why choose us -->
-    <section aria-labelledby="why-heading">
-      <div class="container">
-        <p class="eyebrow text-center">Why Customers Choose Us</p>
-        <h2 id="why-heading" class="text-center">Baked Fresh. Locally Owned. Made With Care.</h2>
-        <div class="grid grid-3">
-          <div class="text-center">
-            <h3>Fresh Every Morning</h3>
-            <p>Everything is baked in small batches, so what you see is what came out of the oven that day.</p>
-          </div>
-          <div class="text-center">
-            <h3>Allergen-Friendly Labels</h3>
-            <p>Our menu clearly marks gluten-free, dairy-free, and nut-free options so everyone can choose with confidence.</p>
-          </div>
-          <div class="text-center">
-            <h3>Easy Custom Orders</h3>
-            <p>Request a custom cake online in minutes with our simple, no-fuss order form.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom CTA banner -->
-    <section class="bg-brown" aria-labelledby="cta-heading">
+    <section class="bg-taupe" aria-labelledby="page-heading">
       <div class="container text-center">
-        <h2 id="cta-heading">Planning a Party or Celebration?</h2>
-        <p>Tell us your date and design idea, and we'll take care of the rest.</p>
-        <a href="order.html" class="btn btn-primary">Start Your Custom Order</a>
+        <p class="eyebrow">Made to Order</p>
+        <h1 id="page-heading">Request a Custom Cake</h1>
+        <p class="section-intro">
+          Fill in the form below and our team will confirm your order within 24 hours.
+          Custom cakes need at least 3 days notice. Fields marked
+          <span class="required-flag">*</span> are required.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <div class="container">
+        <h2 id="form-heading" class="visually-hidden">Custom order form</h2>
+
+        <div class="form-wrapper">
+
+          <div id="form-success" role="status" aria-live="polite">
+            Thank you! Your custom order request has been received. We'll be in touch soon to confirm details.
+          </div>
+
+          <form id="order-form" novalidate>
+
+            <div class="form-group">
+              <label for="full-name">Full Name <span class="required-flag">*</span></label>
+              <input type="text" id="full-name" name="full-name" required minlength="2" autocomplete="name">
+              <span class="error-message" id="full-name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-flag">*</span></label>
+              <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" autocomplete="email" placeholder="name@example.com">
+              <small>We'll send your order confirmation here.</small>
+              <span class="error-message" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required-flag">*</span></label>
+              <input type="tel" id="phone" name="phone" required pattern="^[\d\s()+-]{7,15}$" autocomplete="tel" placeholder="e.g. 868-555-1234">
+              <span class="error-message" id="phone-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cake-date">Pickup Date <span class="required-flag">*</span></label>
+              <input type="date" id="cake-date" name="cake-date" required>
+              <small>Please allow at least 3 days notice for custom cakes.</small>
+              <span class="error-message" id="cake-date-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cake-size">Cake Size <span class="required-flag">*</span></label>
+              <select id="cake-size" name="cake-size" required>
+                <option value="">Select a size</option>
+                <option value="small">Small (serves 6-8)</option>
+                <option value="medium">Medium (serves 12-15)</option>
+                <option value="large">Large (serves 20-25)</option>
+                <option value="tiered">Tiered (serves 30+)</option>
+              </select>
+              <span class="error-message" id="cake-size-error" role="alert"></span>
+            </div>
+
+            <fieldset>
+              <legend>Occasion <span class="required-flag">*</span> (choose at least one)</legend>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-birthday" name="occasion" value="Birthday">
+                <label for="occasion-birthday" style="font-weight:400;">Birthday</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-wedding" name="occasion" value="Wedding">
+                <label for="occasion-wedding" style="font-weight:400;">Wedding</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-graduation" name="occasion" value="Graduation">
+                <label for="occasion-graduation" style="font-weight:400;">Graduation</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-other" name="occasion" value="Other">
+                <label for="occasion-other" style="font-weight:400;">Other Celebration</label>
+              </div>
+              <span class="error-message" id="occasion-error" role="alert"></span>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="details">Design Details <span class="required-flag">*</span></label>
+              <textarea id="details" name="details" rows="4" required minlength="10" placeholder="Tell us about flavour, colours, theme, or number of guests..."></textarea>
+              <span class="error-message" id="details-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Order Request</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -168,5 +157,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 </html>

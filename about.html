@@ -1,147 +1,163 @@
-// ==========================================================================
-// validation.js — custom JavaScript validation for the Custom Order form
-// Runs in addition to native HTML5 validation attributes (required, type,
-// pattern) already set on the form fields in order.html.
-// ==========================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Benji Bakery</title>
+  <meta name="description" content="Learn about Benji Bakery's story, our mission and vision, and meet the small team behind the ovens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('order-form');
-  if (!form) return; // this script only runs on the order page
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  var successBox = document.getElementById('form-success');
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo" aria-label="Benji Bakery home">
+        <span>B</span>enji Bakery
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Custom Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  // Regular expressions used for custom pattern checks
-  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  // Accepts formats like 868-555-1234, (868) 555 1234, 8685551234
-  var phonePattern = /^[\d\s()+-]{7,15}$/;
+  <main id="main-content">
 
-  // Fields that need validating, with a custom message for each failure type
-  var fields = [
-    {
-      id: 'full-name',
-      validate: function (value) {
-        if (value.trim() === '') return 'Please enter your full name.';
-        if (value.trim().length < 2) return 'Name must be at least 2 characters.';
-        return '';
-      }
-    },
-    {
-      id: 'email',
-      validate: function (value) {
-        if (value.trim() === '') return 'Please enter your email address.';
-        if (!emailPattern.test(value.trim())) return 'Please enter a valid email address, e.g. name@example.com.';
-        return '';
-      }
-    },
-    {
-      id: 'phone',
-      validate: function (value) {
-        if (value.trim() === '') return 'Please enter a contact phone number.';
-        if (!phonePattern.test(value.trim())) return 'Please enter a valid phone number (7-15 digits).';
-        return '';
-      }
-    },
-    {
-      id: 'cake-date',
-      validate: function (value) {
-        if (value === '') return 'Please select a pickup date.';
-        var today = new Date();
-        today.setHours(0, 0, 0, 0);
-        var chosen = new Date(value);
-        var minDate = new Date(today);
-        minDate.setDate(today.getDate() + 3); // require 3 days' notice
-        if (chosen < minDate) return 'Custom cakes need at least 3 days notice. Please choose a later date.';
-        return '';
-      }
-    },
-    {
-      id: 'cake-size',
-      validate: function (value) {
-        if (value === '') return 'Please choose a cake size.';
-        return '';
-      }
-    },
-    {
-      id: 'details',
-      validate: function (value) {
-        if (value.trim() === '') return 'Please tell us a little about the design you want.';
-        if (value.trim().length < 10) return 'Please add a few more details (at least 10 characters).';
-        return '';
-      }
-    }
-  ];
+    <section class="bg-taupe" aria-labelledby="page-heading">
+      <div class="container text-center">
+        <p class="eyebrow">Our Story</p>
+        <h1 id="page-heading">About Benji Bakery</h1>
+        <p class="section-intro">Fresh bread, honest ingredients, and a genuine love for baking - that's what Benji Bakery has been about since day one.</p>
+      </div>
+    </section>
 
-  function showError(field, message) {
-    var group = document.getElementById(field.id).closest('.form-group');
-    var errorEl = document.getElementById(field.id + '-error');
-    group.classList.add('has-error');
-    errorEl.textContent = message;
-  }
+    <!-- Company history -->
+    <section aria-labelledby="history-heading">
+      <div class="container grid grid-2" style="align-items:center;">
+        <div>
+          <h2 id="history-heading">How We Started</h2>
+          <p>
+            Benji Bakery began as weekend baking for family and friends before growing into a
+            full neighbourhood bakery. Word of mouth about our sourdough and custom cakes spread
+            quickly, and soon our little kitchen wasn't big enough to keep up with the orders
+            coming in over the phone and social media.
+          </p>
+          <p>
+            Today, we bake fresh bread, pastries, and made-to-order cakes every day, using the
+            same recipes and the same attention to detail we started with. This website exists
+            so it is easier than ever for customers to see what's fresh, learn our story, and
+            place custom cake orders without having to call or message us directly.
+          </p>
+        </div>
+        <img src="https://images.pexels.com/photos/29380155/pexels-photo-29380155.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interior of Benji Bakery showing freshly baked bread on display shelves" style="border-radius:8px;">
+      </div>
+    </section>
 
-  function clearError(field) {
-    var group = document.getElementById(field.id).closest('.form-group');
-    var errorEl = document.getElementById(field.id + '-error');
-    group.classList.remove('has-error');
-    errorEl.textContent = '';
-  }
+    <!-- Mission & vision -->
+    <section class="bg-taupe" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 id="mission-heading" class="text-center">Our Mission &amp; Vision</h2>
+        <div class="grid grid-2">
+          <div class="info-card">
+            <h3>Mission</h3>
+            <p>
+              To bake fresh, honest food every day and make it simple for our neighbours to find,
+              order, and enjoy it - whether that's a loaf of bread for tonight's dinner or a cake
+              for a once-a-year celebration.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Vision</h3>
+            <p>
+              To be the bakery our community thinks of first: known for consistent quality,
+              friendly service, and a menu that's clear and easy to trust, including clear
+              allergen information for every item.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  function validateField(field) {
-    var input = document.getElementById(field.id);
-    var message = field.validate(input.value);
-    if (message) {
-      showError(field, message);
-      return false;
-    }
-    clearError(field);
-    return true;
-  }
+    <!-- Team member profiles -->
+    <section aria-labelledby="team-heading">
+      <div class="container">
+        <p class="eyebrow text-center">Meet the Team</p>
+        <h2 id="team-heading" class="text-center">The People Behind the Ovens</h2>
+        <div class="grid grid-3">
+          <div class="team-member">
+            <div class="avatar" aria-hidden="true">BH</div>
+            <h3>Benji Harris</h3>
+            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Founder &amp; Head Baker</p>
+            <p>Started baking bread at home and turned it into the bakery you see today.</p>
+          </div>
+          <div class="team-member">
+            <div class="avatar" aria-hidden="true">CH</div>
+            <h3>Chelsea Harris</h3>
+            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Operations &amp; Custom Orders</p>
+            <p>Manages custom cake orders and keeps the daily menu fresh and accurate.</p>
+          </div>
+          <div class="team-member">
+            <div class="avatar" aria-hidden="true">MJ</div>
+            <h3>Marcus Joseph</h3>
+            <p class="eyebrow" style="color:var(--dark-brown); opacity:0.7;">Pastry Chef</p>
+            <p>Handles our croissants, muffins, and seasonal pastry specials.</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:0.875rem; color:#6d4c41; margin-top:1rem;">
+          <em>Team photos above use styled initials as placeholder avatars; replace with real staff photos before your final submission if available.</em>
+        </p>
+      </div>
+    </section>
 
-  // Validate a field the moment the user leaves it (better UX than only on submit)
-  fields.forEach(function (field) {
-    var input = document.getElementById(field.id);
-    input.addEventListener('blur', function () {
-      validateField(field);
-    });
-  });
+    <section class="bg-brown" aria-labelledby="about-cta-heading">
+      <div class="container text-center">
+        <h2 id="about-cta-heading">Ready to Place an Order?</h2>
+        <p>Browse today's menu or start a custom cake request in a few clicks.</p>
+        <div class="hero-ctas">
+          <a href="menu.html" class="btn btn-primary">View Menu</a>
+          <a href="order.html" class="btn btn-secondary" style="border-color:#FFFDF9; color:#FFFDF9;">Custom Order</a>
+        </div>
+      </div>
+    </section>
 
-  // Checkbox: at least one occasion must be selected (custom control group)
-  function validateOccasion() {
-    var checked = form.querySelectorAll('input[name="occasion"]:checked');
-    var errorEl = document.getElementById('occasion-error');
-    if (checked.length === 0) {
-      errorEl.textContent = 'Please select at least one occasion.';
-      return false;
-    }
-    errorEl.textContent = '';
-    return true;
-  }
+  </main>
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // stop the real submission; this is a front-end demo form
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Benji Bakery</h4>
+          <p>Fresh bread, pastries, and custom cakes baked daily in the heart of town.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Custom Order</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>12 Baker Street, Sangre Grande, Trinidad and Tobago</p>
+          <p>Open Tue-Sun, 6:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benji Bakery. All rights reserved. Site built for INFO 0211 - Web Design.</p>
+      </div>
+    </div>
+  </footer>
 
-    var allValid = true;
-
-    fields.forEach(function (field) {
-      if (!validateField(field)) {
-        allValid = false;
-      }
-    });
-
-    if (!validateOccasion()) {
-      allValid = false;
-    }
-
-    if (allValid) {
-      form.reset();
-      successBox.style.display = 'block';
-      successBox.setAttribute('tabindex', '-1');
-      successBox.focus();
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-      successBox.style.display = 'none';
-      // Move keyboard focus to the first invalid field for accessibility
-      var firstError = form.querySelector('.has-error input, .has-error select, .has-error textarea');
-      if (firstError) firstError.focus();
-    }
-  });
-});
+  <script src="js/main.js"></script>
+</body>
+</html>
