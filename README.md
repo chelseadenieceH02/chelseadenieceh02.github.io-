@@ -1,2 +1,256 @@
-# chelseadenieceh02.github.io-
-INFO 0211 Web Design term project - Benji Bakery website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Menu | Benji Bakery</title>
+  <meta name="description" content="Browse Benji Bakery's daily menu of fresh bread, pastries, custom cakes, and cookies, with prices and allergen information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo" aria-label="Benji Bakery home">
+        <span>B</span>enji Bakery
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="order.html">Custom Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="bg-taupe" aria-labelledby="page-heading">
+      <div class="container text-center">
+        <p class="eyebrow">What's Fresh Today</p>
+        <h1 id="page-heading">Our Daily Menu</h1>
+        <p class="section-intro">
+          Everything below is baked fresh in-house. Allergen badges are shown on every item -
+          please ask our staff if you have a severe allergy, as items are prepared in a shared kitchen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Breads -->
+    <section aria-labelledby="bread-heading">
+      <div class="container">
+        <h2 id="bread-heading">Fresh Bread</h2>
+        <div class="grid grid-4">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/5713769/pexels-photo-5713769.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Round crusty sourdough loaf with a floured top">
+            <div class="card-body">
+              <h3>Classic Sourdough</h3>
+              <span class="badge">Vegan</span><span class="badge">Contains Gluten</span>
+              <p>Slow-fermented, crisp crust, airy crumb.</p>
+              <p class="card-price">$28.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/14774815/pexels-photo-14774815.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted whole grain loaves on a bakery shelf">
+            <div class="card-body">
+              <h3>Whole Wheat Loaf</h3>
+              <span class="badge">Vegan</span><span class="badge">Contains Gluten</span>
+              <p>Hearty, nutty flavour, great for sandwiches.</p>
+              <p class="card-price">$22.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/11408146/pexels-photo-11408146.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh baguettes wrapped in paper">
+            <div class="card-body">
+              <h3>French Baguette</h3>
+              <span class="badge">Contains Gluten</span>
+              <p>Crackling crust, soft centre, baked twice daily.</p>
+              <p class="card-price">$18.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/30510114/pexels-photo-30510114.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gluten-free bread loaf on a wooden board">
+            <div class="card-body">
+              <h3>Gluten-Free Loaf</h3>
+              <span class="badge">Gluten-Free</span><span class="badge">Dairy-Free</span>
+              <p>Soft, seeded loaf made with a rice and oat blend.</p>
+              <p class="card-price">$32.00</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pastries -->
+    <section class="bg-taupe" aria-labelledby="pastry-heading">
+      <div class="container">
+        <h2 id="pastry-heading">Pastries</h2>
+        <div class="grid grid-4">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/2097522/pexels-photo-2097522.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Golden butter croissants stacked on a tray">
+            <div class="card-body">
+              <h3>Butter Croissant</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Flaky, buttery, baked fresh each morning.</p>
+              <p class="card-price">$8.50</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/29445730/pexels-photo-29445730.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted muffins and pastries on a display tray">
+            <div class="card-body">
+              <h3>Blueberry Muffin</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Moist muffin loaded with fresh blueberries.</p>
+              <p class="card-price">$9.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/37218787/pexels-photo-37218787.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Apple pastry dusted with powdered sugar">
+            <div class="card-body">
+              <h3>Apple Turnover</h3>
+              <span class="badge">Contains Gluten</span>
+              <p>Flaky pastry filled with spiced apple.</p>
+              <p class="card-price">$10.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/5112575/pexels-photo-5112575.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted breakfast pastries in a wooden basket">
+            <div class="card-body">
+              <h3>Pastry Sampler (4)</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>A mixed box of our four most popular pastries.</p>
+              <p class="card-price">$32.00</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cakes -->
+    <section aria-labelledby="cake-heading">
+      <div class="container">
+        <h2 id="cake-heading">Cakes</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/35228372/pexels-photo-35228372.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Decorated round celebration cake in the display case">
+            <div class="card-body">
+              <h3>Signature Celebration Cake</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Our classic vanilla or chocolate sponge, custom decorated.</p>
+              <p class="card-price">From $180.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/12329780/pexels-photo-12329780.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Individual cupcakes with icing on a tray">
+            <div class="card-body">
+              <h3>Cupcake Box (6)</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Assorted flavours, hand-piped icing.</p>
+              <p class="card-price">$45.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/11288937/pexels-photo-11288937.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted mini pastries and cake slices in a display cabinet">
+            <div class="card-body">
+              <h3>Need Something Custom?</h3>
+              <span class="badge">Made to Order</span>
+              <p>Tell us your date, size, and design idea using our order form.</p>
+              <p><a href="order.html" class="btn btn-primary">Start Custom Order</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cookies & treats -->
+    <section class="bg-taupe" aria-labelledby="cookie-heading">
+      <div class="container">
+        <h2 id="cookie-heading">Cookies &amp; Treats</h2>
+        <div class="grid grid-4">
+          <article class="card">
+            <img src="https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tray of fresh baked cookies">
+            <div class="card-body">
+              <h3>Chocolate Chip Cookie</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Soft centre, crisp edge, classic favourite.</p>
+              <p class="card-price">$5.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/7405059/pexels-photo-7405059.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted baked goods in a glass display counter">
+            <div class="card-body">
+              <h3>Brownie Bite</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>Rich, fudgy, cut into bite-sized squares.</p>
+              <p class="card-price">$6.00</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/14363849/pexels-photo-14363849.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted breads and treats in a bakery window display">
+            <div class="card-body">
+              <h3>Almond Biscotti</h3>
+              <span class="badge">Gluten-Free</span><span class="badge">Dairy-Free</span>
+              <p>Crunchy, twice-baked, great with coffee.</p>
+              <p class="card-price">$6.50</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.pexels.com/photos/20552663/pexels-photo-20552663.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Window display of assorted fresh baked treats">
+            <div class="card-body">
+              <h3>Treat Box (8)</h3>
+              <span class="badge">Contains Gluten</span><span class="badge">Contains Dairy</span>
+              <p>A mixed box of cookies and brownie bites.</p>
+              <p class="card-price">$36.00</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brown" aria-labelledby="menu-cta-heading">
+      <div class="container text-center">
+        <h2 id="menu-cta-heading">Don't See What You're Looking For?</h2>
+        <p>Ask us about a custom cake or a large order for your next event.</p>
+        <a href="order.html" class="btn btn-primary">Request a Custom Order</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Benji Bakery</h4>
+          <p>Fresh bread, pastries, and custom cakes baked daily in the heart of town.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Custom Order</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>12 Baker Street, Sangre Grande, Trinidad and Tobago</p>
+          <p>Open Tue-Sun, 6:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benji Bakery. All rights reserved. Site built for INFO 0211 - Web Design.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
