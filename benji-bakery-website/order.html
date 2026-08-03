@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cake Order | Benji Bakery</title>
+  <meta name="description" content="Request a custom cake from Benji Bakery. Tell us your date, size, and design idea using our online order form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo" aria-label="Benji Bakery home">
+        <span>B</span>enji Bakery
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" aria-current="page">Custom Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="bg-taupe" aria-labelledby="page-heading">
+      <div class="container text-center">
+        <p class="eyebrow">Made to Order</p>
+        <h1 id="page-heading">Request a Custom Cake</h1>
+        <p class="section-intro">
+          Fill in the form below and our team will confirm your order within 24 hours.
+          Custom cakes need at least 3 days notice. Fields marked
+          <span class="required-flag">*</span> are required.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <div class="container">
+        <h2 id="form-heading" class="visually-hidden">Custom order form</h2>
+
+        <div class="form-wrapper">
+
+          <div id="form-success" role="status" aria-live="polite">
+            Thank you! Your custom order request has been received. We'll be in touch soon to confirm details.
+          </div>
+
+          <form id="order-form" novalidate>
+
+            <div class="form-group">
+              <label for="full-name">Full Name <span class="required-flag">*</span></label>
+              <input type="text" id="full-name" name="full-name" required minlength="2" autocomplete="name">
+              <span class="error-message" id="full-name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-flag">*</span></label>
+              <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" autocomplete="email" placeholder="name@example.com">
+              <small>We'll send your order confirmation here.</small>
+              <span class="error-message" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required-flag">*</span></label>
+              <input type="tel" id="phone" name="phone" required pattern="^[\d\s()+-]{7,15}$" autocomplete="tel" placeholder="e.g. 868-555-1234">
+              <span class="error-message" id="phone-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cake-date">Pickup Date <span class="required-flag">*</span></label>
+              <input type="date" id="cake-date" name="cake-date" required>
+              <small>Please allow at least 3 days notice for custom cakes.</small>
+              <span class="error-message" id="cake-date-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cake-size">Cake Size <span class="required-flag">*</span></label>
+              <select id="cake-size" name="cake-size" required>
+                <option value="">Select a size</option>
+                <option value="small">Small (serves 6-8)</option>
+                <option value="medium">Medium (serves 12-15)</option>
+                <option value="large">Large (serves 20-25)</option>
+                <option value="tiered">Tiered (serves 30+)</option>
+              </select>
+              <span class="error-message" id="cake-size-error" role="alert"></span>
+            </div>
+
+            <fieldset>
+              <legend>Occasion <span class="required-flag">*</span> (choose at least one)</legend>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-birthday" name="occasion" value="Birthday">
+                <label for="occasion-birthday" style="font-weight:400;">Birthday</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-wedding" name="occasion" value="Wedding">
+                <label for="occasion-wedding" style="font-weight:400;">Wedding</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-graduation" name="occasion" value="Graduation">
+                <label for="occasion-graduation" style="font-weight:400;">Graduation</label>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="occasion-other" name="occasion" value="Other">
+                <label for="occasion-other" style="font-weight:400;">Other Celebration</label>
+              </div>
+              <span class="error-message" id="occasion-error" role="alert"></span>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="details">Design Details <span class="required-flag">*</span></label>
+              <textarea id="details" name="details" rows="4" required minlength="10" placeholder="Tell us about flavour, colours, theme, or number of guests..."></textarea>
+              <span class="error-message" id="details-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Order Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Benji Bakery</h4>
+          <p>Fresh bread, pastries, and custom cakes baked daily in the heart of town.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Custom Order</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>12 Baker Street, Sangre Grande, Trinidad and Tobago</p>
+          <p>Open Tue-Sun, 6:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Benji Bakery. All rights reserved. Site built for INFO 0211 - Web Design.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>
